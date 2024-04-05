@@ -1,0 +1,18 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+bluetuith = ""
+btop = ""
+fish = ""
+hypr = ""
+kitty = ""
+nemo = ""
+nvim = ""
+"pavucontrol.ini" = ""
+"starship.toml" = ""
+user-dirs = ""
+
+[default.variables]
