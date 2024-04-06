@@ -4,15 +4,16 @@
 depends = []
 
 [default.files]
-bluetuith = ""
-btop = ""
-fish = ""
-hypr = ""
-kitty = ""
-nemo = ""
-nvim = ""
-"pavucontrol.ini" = ""
-"starship.toml" = ""
-user-dirs = ""
+bluetuith = "~/.config/bluetuith"
+btop = "~/.config/btop"
+fish = "~/.config/fish"
+hypr = "~/.config/hypr"
+kitty = "~/.config/kitty"
+nemo = "~/.config/nemo"
+nvim = "~/.config/nvim"
+"pavucontrol.ini" = "~/.config/pavucontrol.ini"
+"starship.toml" = "~/.config/starship.toml"
+"user-dirs/user-dirs.dirs" = "~/.config/user-dirs.dirs"
+"user-dirs/user-dirs.locale" = "~/.config/user-dirs.locale"
 
 [default.variables]
