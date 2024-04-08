@@ -1,0 +1,6 @@
+require('settings')
+require('keymaps')
+require('plugins-setup')
+require('lualine-setup')
+require('instant-markdown')
+require('seoul256-setup')
