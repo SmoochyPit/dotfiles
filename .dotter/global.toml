@@ -15,5 +15,6 @@ nvim = "~/.config/nvim"
 "starship.toml" = "~/.config/starship.toml"
 "user-dirs/user-dirs.dirs" = "~/.config/user-dirs.dirs"
 "user-dirs/user-dirs.locale" = "~/.config/user-dirs.locale"
+"waybar" = "~/.config/waybar"
 
 [default.variables]
