@@ -11,8 +11,25 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require("lazy").setup("plugins")
+
+--[[ 
 require("lazy").setup({
 'nvim-lualine/lualine.nvim',
 'instant-markdown/vim-instant-markdown',
-'shaunsingh/seoul256.nvim'
+{
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+},
+'neovim/nvim-lspconfig',
+'williamboman/mason.nvim',
+'williamboman/mason-lspconfig.nvim',
+{ 'uZer/pywal16.nvim', name = "pywal16" }
 })
+
+require("plugins/lualine-setup")
+require("plugins/instant-markdown")
+require("plugins/mason-setup")
+require("plugins/treesitter-setup")
+require("plugins/pywal16-setup")
+--]]
