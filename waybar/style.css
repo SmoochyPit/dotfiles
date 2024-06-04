@@ -1,53 +1,70 @@
+@import url('file:///home/smooch/.cache/wal/colors-waybar.css');
+
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: ttf-iosevka-nerd, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
-    min-height: 0;
+    min-height: 0px;
+}
+
+.modules-left, .modules-right {
+    background: alpha(@background, 0.5);
+    margin: 5px 5px 0px 5px;
+    padding: 2px 5px;
+    border: 2px solid @background;
+    border-radius: 8px;
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: white;
+    background: transparent;
+    /*border-bottom: 3px solid @background;*/
+    color: @foreground;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+    background: alpha(@background, 0.5);
+    border: 1px solid alpha(@foreground, 0.5);
 }
 tooltip label {
-  color: white;
+    color: @foreground;
+}
+
+#custom-launch {
+    color: @color4;
 }
 
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: white;
+    color: @foreground;
     border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: alpha(@background, 0.5);
+    border-bottom: 3px solid @foreground;
 }
 
-#mode, #clock, #battery {
-    padding: 0 10px;
+#clock, #battery, #tray {
+    background-color: @color3;
+    color: @color0;
+    padding: 2px 5px;
+    border-radius: 3px;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#wireplumber, #backlight, #bluetooth {
+    padding: 2px 1px;
+    color: @foreground;
 }
 
-#clock {
-    background-color: #64727D;
+#cpu, #memory, #temperature, #disk, #battery {
+    padding: 2px 2px;
 }
 
-#battery {
-    background-color: #ffffff;
-    color: black;
+#wireplumber {
+    /* For the time being, this gives the space I want before the volume icon*/
+    padding: 2px 1px 2px 5px;
 }
 
 #battery.charging {

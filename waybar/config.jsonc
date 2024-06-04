@@ -1,16 +1,155 @@
 {
-    "layer": "top",
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["battery", "clock"],
-    "sway/window": {
-        "max-length": 50
-    },
-    "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+
+// General
+"layer": "bottom",
+"position":"top",
+"margin-top":0,
+"margin-right":0,
+"margin-bottom":0,
+"margin-left":0,
+"spacing":4,
+"reload_style_on_change":true,
+
+// Modules
+"modules-left": ["group/power", "hyprland/window", "custom/media"],
+"modules-center": ["hyprland/workspaces"],
+"modules-right": ["group/hardware", "tray", "group/icons", "clock"],
+
+// Groups
+"group/hardware": {
+    "orientation": "inherit",
+    "modules": ["cpu", "memory", "temperature", "disk", "battery"]
+},
+"group/icons": {
+    "orientation": "inherit",
+    "modules": ["wireplumber","backlight","bluetooth"]
+},
+"group/power":{
+    "orientation": "inherit",
+    "modules": ["custom/launch","custom/power","custom/reboot","custom/quit"],
+    "drawer": {
+        "children-class": "power-drawer",
+        "transition-duration": 500,
+        "transition-left-to-right": true
     }
+},
+
+// Module config
+"backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} ",
+    "format-icons": ["", ""]
+},
+"battery": {
+    "format": "{capacity}% {icon} ",
+    "format-icons": ["", "", "", "", ""]
+},
+"bluetooth": {
+    "format": " "
+},
+"clock": {
+    "interval": 30,
+    "format": "{:%I:%M %p}  ",
+    "format-alt": "{:%a, %b %d}  ",
+    "max-length": 25,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "actions":  {
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+    }
+},
+"cpu": {
+    "interval": 5,
+    "format": "{usage}%  ",
+    "format-alt": "{avg_frequency:0.1f}GHz  ",
+    "max-length": 15
+},
+"custom/media": {
+    "format": "{icon} Music placeholder!",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+},
+"custom/launch": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+},
+"custom/lock": { // Not installed atm
+    "format": "󰍁 ",
+    "tooltip": false,
+    "on-click": "hyprlock"
+},
+"custom/power": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "shutdown now"
+},
+"custom/quit": {
+    "format": "󰗼 ",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit"
+},
+"custom/reboot": {
+    "format": "󰜉 ",
+    "tooltip": false,
+    "on-click": "reboot"
+},
+"disk": {
+    "interval": 30,
+    "format": "{percentage_free}% 󰆼 ",
+    "path": "/"
+},
+"hyprland/window": {
+    "format":"{class}@@{title}",
+    "rewrite":{ // Orders alphabetically, "a?" is used to take priority
+        "b?(firefox)@@(.*?)(?: — )?Mozilla Firefox": "󰈹   $2",
+        "a?(firefox)@@(.*?)(?: • Foundry Virtual Tabletop — Mozilla Firefox)": "   $2",
+        "(discord)@@(.*)": "   $2",
+        "(WebCord)@@(.*)": "   $2",
+        "(kitty)@@(?=nvim)(.*)": "󰦨   $2",
+        "(kitty)@@(?!nvim)(.*)": "   $2",
+        "(1Password)@@(.*)": "   $2",
+        "(Spotify)@@(.*)": "󰓇   $2",
+        "z?(.*)@@(.*)": "󰘔   $2", // Comment out to leave class name visible
+        "@@": ""
+    },
+    "separate-outputs": true
+},
+"hyprland/workspaces": {
+    "active-only": false,
+    "persistent-workspaces": {
+        "*": 3
+    }
+},
+"memory": {
+    "interval": 15,
+    "format": "{}%  ",
+    "max-length": 10
+},
+"temperature": {
+    "thermal-zone": 0,
+    "critical-threshold": 80,
+    "interval": 10,
+    "format-critical": "{temperatureC}°C  ",
+    "format": "{temperatureC}°C  "
+},
+"tray": {
+    "icon-size": 20,
+    "spacing": 10,
+    "reverse-direction": true
+},
+"wireplumber": {
+    "format": "{icon} ",
+    "format-muted": " ",
+    "on-click": "pulsemixer",
+    "format-icons": ["", "", ""]
+}
+
 }
