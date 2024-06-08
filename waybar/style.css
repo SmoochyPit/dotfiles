@@ -3,12 +3,13 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: ttf-iosevka-nerd, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Iosevka NFP", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0px;
 }
 
-.modules-left, .modules-right {
+.modules-left,
+.modules-right {
     background: alpha(@background, 0.5);
     margin: 5px 5px 0px 5px;
     padding: 2px 5px;
@@ -22,6 +23,11 @@ window#waybar {
     color: @foreground;
 }
 
+#custom-media {
+    padding: 0px 5px 0px 5px;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
 tooltip {
     background: alpha(@background, 0.5);
     border: 1px solid alpha(@foreground, 0.5);
@@ -32,39 +38,74 @@ tooltip label {
 
 #custom-launch {
     color: @color4;
+    padding: 0px 5px;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
+#custom-power,
+#custom-reboot,
+#custom-quit {
+    padding: 0px 5px;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
+#custom-launch:hover,
+#custom-power:hover,
+#custom-reboot:hover ,
+#custom-quit:hover {
+    color: @color3;
+}
+
+#tray {
+    background: transparent;
+    color: @color0;
+    border-radius: 5px;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
+#clock,
+#battery {
+    background: @color3;
+    color: @color0;
+    margin: 0px 2px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
+#wireplumber,
+#backlight,
+#bluetooth,
+#custom-dunst {
+    padding: 2px 2px;
+    margin: 0px 3px;
+    color: @foreground;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
+#cpu,
+#memory,
+#temperature,
+#disk {
+    padding: 2px 5px;
+    text-shadow: 0px 0px 3px alpha(@color0, 0.3);
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 2px;
     background: transparent;
     color: @foreground;
-    border-bottom: 3px solid transparent;
+    border-bottom: 0px solid transparent;
 }
 
-#workspaces button.focused {
-    background: alpha(@background, 0.5);
-    border-bottom: 3px solid @foreground;
+#workspaces button.active {
+    /*background: alpha(@background, 0.2);*/
+    border-bottom: 2px solid @background;
+    /*text-shadow: 0px 0px 2px @background;*/
 }
 
-#clock, #battery, #tray {
-    background-color: @color3;
-    color: @color0;
-    padding: 2px 5px;
-    border-radius: 3px;
-}
-
-#wireplumber, #backlight, #bluetooth {
-    padding: 2px 1px;
-    color: @foreground;
-}
-
-#cpu, #memory, #temperature, #disk, #battery {
-    padding: 2px 2px;
-}
-
-#wireplumber {
-    /* For the time being, this gives the space I want before the volume icon*/
-    padding: 2px 1px 2px 5px;
+#workspaces button:hover {
+    color: @color3;
 }
 
 #battery.charging {
@@ -80,6 +121,16 @@ tooltip label {
 }
 
 #battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#workspaces button.urgent {
     background: #f53c3c;
     color: white;
     animation-name: blink;
