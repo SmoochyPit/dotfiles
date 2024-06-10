@@ -22,11 +22,11 @@
 },
 "group/icons": {
     "orientation": "inherit",
-    "modules": ["wireplumber","backlight","bluetooth","custom/dunst"]
+    "modules": ["backlight", "wireplumber", "network", "bluetooth", "custom/dunst"]
 },
 "group/power":{
     "orientation": "inherit",
-    "modules": ["custom/launch","custom/power","custom/reboot","custom/quit"],
+    "modules": ["custom/launch", "custom/power", "custom/reboot", "custom/quit"],
     "drawer": {
         "children-class": "power-drawer",
         "transition-duration": 500,
@@ -38,14 +38,28 @@
 "backlight": {
     "device": "intel_backlight",
     "format": "{icon}",
-    "format-icons": ["", ""]
+    "format-icons": ["󰹐", "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
+    "tooltip-format":"{icon} {percent}%"
 },
 "battery": {
     "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "states": {
+        "warning": 25,
+        "critical": 10
+    }
 },
 "bluetooth": {
-    "format": ""
+    "align": 1,
+    "format": "󰂯",
+    "format-disabled": "",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱 <small>{device_battery_percentage}%</small>",
+    "tooltip-format": "󰂯 {num_connections} devices{device_enumerate}",
+    "tooltip-format-enumerate-connected": "\r󰓃 {device_alias}",
+    "tooltip-format-enumerate-connected-battery": "\r󰌌  {device_alias} {device_battery_percentage}%",
 },
 "clock": {
     "interval": 30,
@@ -66,8 +80,9 @@
 },
 "custom/dunst": {
     "exec": "~/.config/waybar/scripts/dunst.sh",
-    "on-click": "dunstctl set-paused toggle",
+    "on-click-right": "dunstctl set-paused toggle",
     "restart-interval": 1,
+    "return-type": "json",
 },
 "custom/media": {
     "format": "{}",
@@ -89,6 +104,7 @@
     "tooltip": false,
     "on-click": "hyprlock"
 },
+// 󰢮  you may have one nf-md-expansion_card, as a treat
 "custom/power": {
     "format": "",
     "tooltip": false,
@@ -106,7 +122,7 @@
 },
 "disk": {
     "interval": 30,
-    "format": "{percentage_used}% 󰆼",
+    "format": "{percentage_used}% 󰋊",
     "path": "/"
 },
 "hyprland/window": {
@@ -133,15 +149,25 @@
 },
 "memory": {
     "interval": 15,
-    "format": "{}% ",
+    "format": "{}% ",
     "max-length": 10
+},
+"network": {
+    "interval": 30,
+    "format-disconnected": "󰤭",
+    "format-ethernet": "",
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format-ethernet": " Ethernet\rvia {ifname}\r󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}\rIP: {ipaddr}\rGateway: {gwaddr}",
+    "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%) \rvia {ifname}\r󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}\rIP: {ipaddr}\rGateway: {gwaddr}",
+    "tooltip-format-disconnected": "󰖪 No Network\rvia {ifname}",
 },
 "temperature": {
     "thermal-zone": 0,
     "critical-threshold": 80,
     "interval": 10,
-    "format-critical": "{temperatureC}°C ",
-    "format": "{temperatureC}°C "
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["󱃃", "󰔏", "󱃂"]
 },
 "tray": {
     "icon-size": 15,
@@ -150,9 +176,10 @@
 },
 "wireplumber": {
     "format": "{icon}",
-    "format-muted": "",
+    "format-muted": "󰝟",
     "on-click": "pulsemixer",
-    "format-icons": ["", "", ""]
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "tooltip-format": "{icon} {volume}%"
 }
 
 }
