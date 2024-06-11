@@ -20,7 +20,6 @@ wallust = { target = "~/.config/wallust", type = "symbolic" }
 cursor = true
 use-vrr = 0
 app-scale = 1.0
-waybar-battery = true
 
 [hyprland.files]
 hypr = "~/.config/hypr"
@@ -29,6 +28,9 @@ waybar = "~/.config/waybar"
 [hyprland.variables]
 hyprland-monitor-line = "auto, highrr, auto, 1.0, bitdepth, 8"
 hyprland-git = false
+waybar-battery = true
+ps-adapter-battery = false
+taskbar-bt-battery = false
 
 [nvidia]
 

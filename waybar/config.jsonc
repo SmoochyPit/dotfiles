@@ -18,8 +18,10 @@
 // Groups
 "group/hardware": {
     "orientation": "inherit",
-    "modules": ["cpu", "memory", "temperature", "disk",
-        {{#if waybar-battery}}"battery"{{/if}}]
+    "modules": [
+        {{#if waybar-battery}}"battery",{{/if}}
+        {{#if ps-adapter-battery}}"battery#ds4",{{/if}}
+        "cpu", "memory", "temperature", "disk"]
 },
 "group/icons": {
     "orientation": "inherit",
@@ -50,6 +52,12 @@
         "critical": 10
     }
 },
+{{#if ps-adapter-battery}}
+"battery#ds4": {
+    "bat": "ps-controller-battery-00:00:00:00:00:00",
+    "format": "{capacity}% 󰊗"
+},
+{{/if}}
 "bluetooth": {
     "align": 1,
     "format": "󰂯",
@@ -57,7 +65,7 @@
     "format-off": "󰂲",
     "format-on": "󰂯",
     "format-connected": "󰂱",
-    "format-connected-battery": "󰂱 <small>{device_battery_percentage}%</small>",
+    "format-connected-battery": "󰂱{{#if taskbar_bt_battery}} <small>{device_battery_percentage}%</small>{{/if}}",
     "tooltip-format": "󰂯 {num_connections} devices{device_enumerate}",
     "tooltip-format-enumerate-connected": "\r󰓃 {device_alias}",
     "tooltip-format-enumerate-connected-battery": "\r󰌌  {device_alias} {device_battery_percentage}%",
