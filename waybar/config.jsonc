@@ -145,6 +145,7 @@
         "(kitty)@@(?!nvim)(.*)": " $2",
         "(1Password)@@(.*)": " $2",
         "(Spotify)@@(.*)": "󰓇 $2",
+        "(steam)@@(.*)": "󰓓 $2",
         "z?(.*)@@(.*)": "󰘔 $2", // Comment out to leave class name visible
         "@@": ""
     },
