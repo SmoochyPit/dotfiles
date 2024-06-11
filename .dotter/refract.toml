@@ -1,0 +1,7 @@
+includes = []
+packages = ["default", "hyprland"]
+
+[files]
+
+[variables]
+hyprland-monitor-line = "eDP-1, highrr, auto, 1.0, bitdepth, 8"

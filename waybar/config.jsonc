@@ -18,7 +18,8 @@
 // Groups
 "group/hardware": {
     "orientation": "inherit",
-    "modules": ["cpu", "memory", "temperature", "disk", "battery"]
+    "modules": ["cpu", "memory", "temperature", "disk",
+        {{#if waybar-battery}}"battery"{{/if}}]
 },
 "group/icons": {
     "orientation": "inherit",

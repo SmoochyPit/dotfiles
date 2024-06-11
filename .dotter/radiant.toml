@@ -1,0 +1,10 @@
+includes = []
+packages = ["default", "hyprland", "nvidia", "openrgb", "uxplay", "udiskie", "wayvnc"]
+
+[files]
+
+[variables]
+app-scale = 1.25
+hyprland-monitor-line = "DP-1, 3440x1440@144, auto, 1.25, bitdepth, 8"
+hyprland-git = true
+waybar-battery = false
