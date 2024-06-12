@@ -78,18 +78,23 @@ filter = "softdark16"
 
 [[entry]]
 template = "templates/colors-waybar.css"
-target = "~/.config/wallust-generated/colors-waybar.css"
+target = "~/.cache/wallust/colors-waybar.css"
 new_engine = false
 
 [[entry]]
 template = "templates/colors-kitty.conf"
-target = "~/.config/wallust-generated/colors-kitty.conf"
+target = "~/.cache/wallust/colors-kitty.conf"
 new_engine = false
 
 [[entry]]
 template = "templates/colors-hyprland.conf"
-target = "~/.config/wallust-generated/colors-hyprland.conf"
+target = "~/.cache/wallust/colors-hyprland.conf"
 new_engine = false
+
+[[entry]]
+template = "templates/colors-neopywal.vim"
+target = "~/.cache/wallust/colors_neopywal.vim"
+new_engine = true
 
 # REMINDER Variables and methods that can be used with templating:
 #  wallpaper:  The full path to the current wallpaper.
