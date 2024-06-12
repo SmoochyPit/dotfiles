@@ -96,6 +96,11 @@ template = "templates/colors-neopywal.vim"
 target = "~/.cache/wallust/colors_neopywal.vim"
 new_engine = true
 
+[[entry]]
+template = "templates/discord-wallust.css"
+target = "/home/smooch/.config/vesktop/themes/wallust.css"
+new_engine = false
+
 # REMINDER Variables and methods that can be used with templating:
 #  wallpaper:  The full path to the current wallpaper.
 #  backend:    Current **backend** being used.
