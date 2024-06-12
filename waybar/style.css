@@ -8,13 +8,23 @@
     min-height: 0px;
 }
 
-.modules-left,
-.modules-right {
+#left-1,
+#right-1,
+#hardware,
+#custom-media {
     background: alpha(@background, 0.5);
     margin: 5px 5px 0px 5px;
     padding: 2px 5px;
     border: 2px solid @background;
     border-radius: 8px;
+}
+
+#custom-media {
+    margin: 5px 5px 0px 0px;
+}
+
+#hardware {
+    margin: 5px 0px 0px 5px;
 }
 
 window#waybar {
@@ -23,8 +33,12 @@ window#waybar {
     color: @foreground;
 }
 
+#window {
+    padding: 0px 5px;
+}
+
 #custom-media {
-    padding: 0px 5px 0px 5px;
+    padding: 2px 10px;
     text-shadow: 0px 0px 3px alpha(@color0, 0.3);
 }
 
@@ -57,27 +71,29 @@ tooltip label {
 }
 
 #tray {
+    padding: 0px 3px 0px 5px;
     background: transparent;
     color: @color0;
     border-radius: 5px;
     text-shadow: 0px 0px 3px alpha(@color0, 0.3);
 }
 
-#clock {
+/* #clock {
     background: @color3;
     color: @color0;
     margin: 0px 2px;
     padding: 2px 5px;
     border-radius: 5px;
     text-shadow: 0px 0px 3px alpha(@color0, 0.3);
-}
+} */
 
 #wireplumber,
 #backlight,
 #bluetooth,
 #custom-dunst,
 #battery,
-#network {
+#network,
+#clock {
     padding: 2px 2px;
     margin: 0px 3px;
     color: @foreground;
@@ -87,9 +103,15 @@ tooltip label {
 #cpu,
 #memory,
 #temperature,
-#disk {
+#disk,
+#custom-nvidia-smi {
     padding: 2px 5px;
     text-shadow: 0px 0px 3px alpha(@color0, 0.3);
+}
+
+window#waybar.empty #window {
+    padding: 0px 0px;
+    margin: 0px;
 }
 
 #workspaces button {

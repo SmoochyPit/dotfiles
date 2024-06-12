@@ -11,17 +11,30 @@
 "reload_style_on_change":true,
 
 // Modules
-"modules-left": ["group/power", "hyprland/window", "custom/media"],
+"modules-left": ["group/left-1", "custom/media"],
 "modules-center": ["hyprland/workspaces"],
-"modules-right": ["group/hardware", "tray", "group/icons", "clock"],
+"modules-right": ["group/hardware", "group/right-1"],
 
-// Groups
+// Visual Grouping
+"group/left-1":{
+    "orientation": "inherit",
+    "modules": ["group/power","hyprland/window"]
+},
+"group/right-1":{
+    "orientation": "inherit",
+    "modules": ["tray", "group/icons", "clock"]
+},
+
+// Type Grouping
 "group/hardware": {
     "orientation": "inherit",
     "modules": [
-        {{#if waybar-battery}}"battery",{{/if}}
-        {{#if ps-adapter-battery}}"battery#ds4",{{/if}}
-        "cpu", "memory", "temperature", "disk"]
+        "cpu", "memory",
+        {{#if dotter.packages.nvidia}}"custom/nvidia-smi",{{/if}}
+        "temperature", "disk"
+        {{#if waybar-battery}},"battery"{{/if}}
+        {{#if ps-adapter-battery}},"battery#ds4"{{/if}}
+    ]
 },
 "group/icons": {
     "orientation": "inherit",
@@ -113,7 +126,15 @@
     "tooltip": false,
     "on-click": "hyprlock"
 },
+{{#if dotter.packages.nvidia}}
 // 󰢮  you may have one nf-md-expansion_card, as a treat
+"custom/nvidia-smi": {
+    "format": "{}% 󰢮",
+    "interval": 5,
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "tooltip-format": "{}%"
+},
+{{/if}}
 "custom/power": {
     "format": "",
     "tooltip": false,
@@ -180,7 +201,7 @@
     "format-icons": ["󱃃", "󰔏", "󱃂"]
 },
 "tray": {
-    "icon-size": 15,
+    "icon-size": 13,
     "spacing": 6,
     "reverse-direction": true
 },
