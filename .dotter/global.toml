@@ -8,6 +8,8 @@ bluetuith = "~/.config/bluetuith"
 btop = "~/.config/btop"
 fish = "~/.config/fish"
 kitty = "~/.config/kitty"
+mangohud = "~/.config/MangoHud"
+"mangohud/beefd-font-patched.otf" = { target = "~/.config/MangoHud/beefd-font-patched.otf", type = "symbolic" }
 nemo = "~/.config/nemo"
 nvim = "~/.config/nvim"
 "pavucontrol.ini" = "~/.config/pavucontrol.ini"
