@@ -10,8 +10,14 @@ return {
 
                 use_wallust = true,
 
-                transparent = true,
+                transparent_background = true,
 
+                custom_highlights = function(colors)
+                    local U = require("neopywal.util")
+                    return {
+                        Comment = { fg = U.lighten(colors.background, 70) },
+                    }
+                end
             })
 
             vim.cmd.colorscheme("neopywal")
