@@ -1,0 +1,27 @@
+[global]
+
+# General
+follow = keyboard
+enable_posix_regex = true
+
+# Sizing
+width = (150, 300)
+height = 75
+offset = 10x10
+origin = top-right
+
+layer = overlay
+
+frame_width = 2
+gap_size = 5
+corner_radius = 8
+
+notification_limit = 3
+indicate_hidden = true
+
+font = "Iosevka 8"
+
+icon_position = right
+
+background = "#0B1400BB"
+

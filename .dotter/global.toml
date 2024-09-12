@@ -6,6 +6,7 @@ depends = []
 [default.files]
 bluetuith = "~/.config/bluetuith"
 btop = "~/.config/btop"
+dunst = "~/.config/dunst"
 fish = "~/.config/fish"
 kitty = "~/.config/kitty"
 mangohud = "~/.config/MangoHud"
