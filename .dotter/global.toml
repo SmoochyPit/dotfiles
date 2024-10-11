@@ -15,6 +15,7 @@ nemo = "~/.config/nemo"
 nvim = "~/.config/nvim"
 "pavucontrol.ini" = "~/.config/pavucontrol.ini"
 "starship.toml" = "~/.config/starship.toml"
+tmux = "~/.config/tmux"
 "user-dirs/user-dirs.dirs" = "~/.config/user-dirs.dirs"
 "user-dirs/user-dirs.locale" = "~/.config/user-dirs.locale"
 wallust = { target = "~/.config/wallust", type = "symbolic" } 
