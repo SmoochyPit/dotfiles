@@ -77,7 +77,7 @@ hyprland.pywal = false
 
 discord.src = "discord-wallust.css"
 discord.dst = "/home/smooch/.config/vesktop/themes/wallust.css"
-discord.pywal = true
+discord.pywal = false
 
 base46.src = "colors-base46.lua"
 base46.dst = "/home/smooch/.config/nvim/lua/themes/wallust.lua"
