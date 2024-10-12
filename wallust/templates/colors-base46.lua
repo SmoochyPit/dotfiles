@@ -63,14 +63,14 @@ M.base_16 = {
 
 M.polish_hl = {
   defaults = {
-    Comment = {
+    --[[Comment = {
       bg = "{{color5}}", -- or M.base_30.cyan
       italic = true,
-    },
+    },]]--
   },
 
   treesitter = {
-    ["@variable"] = { fg = "#background" },
+    ["@variable"] = { fg = "{{background}}" },
   },
 }
 
