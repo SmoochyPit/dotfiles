@@ -1,5 +1,5 @@
 includes = []
-packages = ["default", "hyprland", "nvidia", "openrgb", "uxplay", "udiskie", "wayvnc"]
+packages = ["default", "hyprland", "nvidia", "openrgb", "sunshine", "uxplay", "udiskie", "wayvnc"]
 
 [files]
 
