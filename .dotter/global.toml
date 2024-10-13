@@ -36,6 +36,8 @@ waybar-battery = true
 ps-adapter-battery = false
 taskbar-bt-battery = false
 
+[intel]
+
 [nvidia]
 
 [openrgb]
