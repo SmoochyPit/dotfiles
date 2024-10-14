@@ -16,6 +16,15 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+
+  {
+    'instant-markdown/vim-instant-markdown',
+    ft = "markdown",
+    config = function()
+      require("configs.vim-instant-markdown")
+    end,
+  },
+
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
