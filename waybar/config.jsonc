@@ -161,7 +161,7 @@
         "b?(firefox)@@(.*?)(?: — )?Mozilla Firefox": "󰈹 $2",
         "a?(firefox)@@(.*?)(?: • Foundry Virtual Tabletop — Mozilla Firefox)": " $2",
         "(discord)@@(.*)": " $2",
-        "(WebCord)@@(.*)": " $2",
+        "(vesktop)@@(.*)": " $2",
         "(kitty)@@(?=nvim)(.*)": "󰦨 $2",
         "(kitty)@@(?!nvim)(.*)": " $2",
         "(mpv)@@(.*?)(?: - mpv)": "󰡀 $2",
