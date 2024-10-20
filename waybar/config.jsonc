@@ -186,6 +186,7 @@
     "max-length": 10
 },
 "network": {
+    "interface":"wlan0",
     "interval": 30,
     "format-disconnected": "󰤭",
     "format-ethernet": "",
