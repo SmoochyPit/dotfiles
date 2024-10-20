@@ -21,7 +21,7 @@ return {
     'instant-markdown/vim-instant-markdown',
     ft = "markdown",
     config = function()
-      require("configs.vim-instant-markdown")
+      require "configs.vim-instant-markdown"
     end,
   },
 
@@ -44,7 +44,7 @@ return {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css"
+       "html", "css", "rust"
   		},
   	},
   },
