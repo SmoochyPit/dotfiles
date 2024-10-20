@@ -5,6 +5,7 @@ if status is-interactive
     source ~/.config/fish/aliases.fish
     source ~/.config/fish/env.fish
 
+    fish_add_path /home/smooch/.cargo/bin
 end
 
 set -U fish_greeting
