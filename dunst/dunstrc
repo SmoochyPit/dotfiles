@@ -23,5 +23,6 @@ font = "Iosevka 8"
 
 icon_position = right
 
-background = "#0B1400BB"
+#background = "#0B1400BB"
 
+dmenu = "/usr/bin/wofi --dmenu"
