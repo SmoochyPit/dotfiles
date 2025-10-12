@@ -8,6 +8,7 @@ if status is-interactive
     fish_vi_key_bindings
     fish_add_path /home/smooch/.cargo/bin
     fish_add_path /opt/cuda/bin
+    fish_add_path /home/smooch/Builds/x-tools/armv6-rpi-linux-gnueabihf/bin
 end
 
 set -U fish_greeting
