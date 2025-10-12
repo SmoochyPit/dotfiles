@@ -160,6 +160,8 @@
     "rewrite":{ // Orders alphabetically, "a?" is used to take priority
         "b?(firefox)@@(.*?)(?: — )?Mozilla Firefox": "󰈹 $2",
         "a?(firefox)@@(.*?)(?: • Foundry Virtual Tabletop — Mozilla Firefox)": " $2",
+        "a?(vtt-desktop-client)@@(.*?)(?: • Foundry Virtual Tabletop)": " $2",
+        "b?(vtt-desktop-client)@@(.*?)": " $2",
         "(discord)@@(.*)": " $2",
         "(vesktop)@@(.*)": " $2",
         "(kitty)@@(?=nvim)(.*)": "󰦨 $2",
