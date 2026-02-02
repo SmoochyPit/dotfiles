@@ -14,6 +14,7 @@ mangohud = "~/.config/MangoHud"
 "mangohud/beefd-font-patched.otf" = { target = "~/.config/MangoHud/beefd-font-patched.otf", type = "symbolic" }
 nemo = "~/.config/nemo"
 "nvim/lua/chadrc.lua" = { target = "~/.config/nvim/lua/chadrc.lua", type = "template" }
+nix = "~/.config/nix"
 nvim = "~/.config/nvim"
 "pavucontrol.ini" = "~/.config/pavucontrol.ini"
 "starship.toml" = "~/.config/starship.toml"
