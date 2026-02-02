@@ -1,0 +1,8 @@
+# Save in ~/Videos
+-o "~/Videos/Saved/%(title)s.%(ext)s"
+
+# Prefer 1080p or lower resolutions
+-f "b"
+
+# Filesize limit of 50mb
+-S "filesize:50M"

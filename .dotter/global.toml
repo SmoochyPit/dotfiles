@@ -21,6 +21,7 @@ tmux = "~/.config/tmux"
 "user-dirs/user-dirs.dirs" = "~/.config/user-dirs.dirs"
 "user-dirs/user-dirs.locale" = "~/.config/user-dirs.locale"
 wallust = { target = "~/.config/wallust", type = "symbolic" } 
+yt-dlp = "~/.config/yt-dlp" 
 
 [default.variables]
 cursor = true
