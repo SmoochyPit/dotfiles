@@ -4,6 +4,7 @@
 depends = []
 
 [default.files]
+"alsoft.conf" = "~/.config/alsoft.conf"
 bluetuith = "~/.config/bluetuith"
 btop = { target = "~/.config/btop", type = "template" }
 dunst = "~/.config/dunst"
