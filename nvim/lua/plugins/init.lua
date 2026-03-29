@@ -18,7 +18,7 @@ return {
   },
 
   {
-    'instant-markdown/vim-instant-markdown',
+    "instant-markdown/vim-instant-markdown",
     ft = "markdown",
     config = function()
       require "configs.vim-instant-markdown"
@@ -34,9 +34,7 @@ return {
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
+    opts = require "configs.lspconfig"
   },
 
   {
@@ -48,8 +46,22 @@ return {
   		},
   	},
   },
+
   {
     "tpope/vim-obsession",
     cmd = "Obsession",
   },
+
+  {
+    "vimwiki/vimwiki",
+    event = "BufEnter *.md",
+    keys = {
+        "<leader>ww",
+        "<leader>wt",
+        "<leader>w<leader>w"
+    },
+    init = function()
+        require "configs.vimwiki"
+    end
+  }
 }
