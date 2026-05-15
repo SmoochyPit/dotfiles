@@ -5,8 +5,16 @@
 ---@type ChadrcConfig
 local M = {}
 
+M.ui = {
+    statusline = {
+        theme = "default",
+        separator_style = "round"
+    }
+}
+
 M.base46 = {
-	theme = "onedark",
+    theme = "chadwal",
+    transparency = true,
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -14,11 +22,8 @@ M.base46 = {
 	-- },
 }
 
--- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
+M.nvdash = {
+    load_on_startup = true
+}
 
 return M
