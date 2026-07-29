@@ -117,7 +117,7 @@
     "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
 },
 "custom/launch": {
-    "format": "",
+    "format": "",
     "tooltip": false,
     "on-click": "wofi --show drun"
 },

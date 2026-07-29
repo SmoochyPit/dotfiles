@@ -12,7 +12,6 @@ fish = "~/.config/fish"
 kitty = "~/.config/kitty"
 mangohud = "~/.config/MangoHud"
 "mangohud/beefd-font-patched.otf" = { target = "~/.config/MangoHud/beefd-font-patched.otf", type = "symbolic" }
-nemo = "~/.config/nemo"
 nix = "~/.config/nix"
 "nvimold/lua/chadrc.lua" = { target = "~/.config/nvim/lua/chadrc.lua", type = "template" }
 nvimold = "~/.config/nvim"
