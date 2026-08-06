@@ -4,25 +4,25 @@
 depends = []
 
 [default.files]
-"alsoft.conf" = "~/.config/alsoft.conf"
-bluetuith = "~/.config/bluetuith"
-btop = { target = "~/.config/btop", type = "template" }
-dunst = "~/.config/dunst"
+#"alsoft.conf" = "~/.config/alsoft.conf"
+#bluetuith = "~/.config/bluetuith"
+#btop = { target = "~/.config/btop", type = "template" }
+#dunst = "~/.config/dunst"
 fish = "~/.config/fish"
 kitty = "~/.config/kitty"
-mangohud = "~/.config/MangoHud"
-"mangohud/beefd-font-patched.otf" = { target = "~/.config/MangoHud/beefd-font-patched.otf", type = "symbolic" }
-nix = "~/.config/nix"
-"nvimold/lua/chadrc.lua" = { target = "~/.config/nvim/lua/chadrc.lua", type = "template" }
-nvimold = "~/.config/nvim"
-nvim = "~/.config/nvimnew"
-"pavucontrol.ini" = "~/.config/pavucontrol.ini"
+#mangohud = "~/.config/MangoHud"
+#"mangohud/beefd-font-patched.otf" = { target = "~/.config/MangoHud/beefd-font-patched.otf", type = "symbolic" }
+#nix = "~/.config/nix"
+#"nvimold/lua/chadrc.lua" = { target = "~/.config/nvim/lua/chadrc.lua", type = "template" }
+#nvimold = "~/.config/nvim"
+#nvim = "~/.config/nvimnew"
+#"pavucontrol.ini" = "~/.config/pavucontrol.ini"
 "starship.toml" = "~/.config/starship.toml"
-tmux = "~/.config/tmux"
-"user-dirs/user-dirs.dirs" = "~/.config/user-dirs.dirs"
-"user-dirs/user-dirs.locale" = "~/.config/user-dirs.locale"
+#tmux = "~/.config/tmux"
+#"user-dirs/user-dirs.dirs" = "~/.config/user-dirs.dirs"
+#"user-dirs/user-dirs.locale" = "~/.config/user-dirs.locale"
 wallust = { target = "~/.config/wallust", type = "symbolic" } 
-yt-dlp = "~/.config/yt-dlp" 
+#yt-dlp = "~/.config/yt-dlp" 
 
 [default.variables]
 cursor = true
@@ -31,7 +31,7 @@ app-scale = 1.0
 
 [hyprland.files]
 hyprold = "~/.config/hypr"
-hypr = "~/.config/hyprnew"
+#hypr = "~/.config/hyprnew"
 waybar = "~/.config/waybar"
 
 [hyprland.variables]
