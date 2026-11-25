@@ -13,7 +13,7 @@ hl.config({
     kb_layout = "us",
     kb_variant = nil,
     kb_model = nil,
-    kb_options = "shift:both_capslock_cancel,caps:escape", -- Careful, breaks my Helldivers!
+--    kb_options = "shift:both_capslock_cancel,caps:escape", -- Careful, breaks my Helldivers!
     kb_rules = nil,
     accel_profile = "flat",
 

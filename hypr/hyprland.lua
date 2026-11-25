@@ -14,11 +14,11 @@ hl.config({
 
     no_warps = false,  -- Off to hopefully fix fullscreen games with bad cursor position
 
-    --min_refresh_rate = 76,
+    min_refresh_rate = 76,
     no_break_fs_vrr = 1,
   },
   misc = {
-    vrr = 0,
+    vrr = 1,
 
     on_focus_under_fullscreen = 1,
     exit_window_retains_fullscreen = true,
