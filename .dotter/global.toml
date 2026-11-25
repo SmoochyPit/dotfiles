@@ -31,7 +31,7 @@ app-scale = 1.0
 
 [hyprland.files]
 hyprold = "~/.config/hypr"
-#hypr = "~/.config/hyprnew"
+hypr = "~/.config/hyprnew"
 waybar = "~/.config/waybar"
 
 [hyprland.variables]

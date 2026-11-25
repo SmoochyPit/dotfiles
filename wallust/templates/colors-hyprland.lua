@@ -1,0 +1,23 @@
+-- Color definitions
+
+local foreground = "rgba({{foreground | strip}}FF)"
+local background = "rgba({{background | strip}}FF)"
+local shadow = "rgba({{background | strip}}80)"
+local cursor = "rgba({{cursor | strip}}FF)"
+
+local color0 = "rgba({{color0 | strip}}FF)"
+local color1 = "rgba({{color1 | strip}}FF)"
+local color2 = "rgba({{color2 | strip}}FF)"
+local color3 = "rgba({{color3 | strip}}FF)"
+local color4 = "rgba({{color4 | strip}}FF)"
+local color5 = "rgba({{color5 | strip}}FF)"
+local color6 = "rgba({{color6 | strip}}FF)"
+local color7 = "rgba({{color7 | strip}}FF)"
+local color8 = "rgba({{color8 | strip}}FF)"
+local color9 = "rgba({{color9 | strip}}FF)"
+local color10 = "rgba({{color10 | strip}}FF)"
+local color11 = "rgba({{color11 | strip}}FF)"
+local color12 = "rgba({{color12 | strip}}FF)"
+local color13 = "rgba({{color13 | strip}}FF)"
+local color14 = "rgba({{color14 | strip}}FF)"
+local color15 = "rgba({{color15 | strip}}FF)"

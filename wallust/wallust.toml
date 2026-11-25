@@ -24,7 +24,7 @@ color_space = "lab"
 # Difference between similar colors, used by the colorspace:
 #  1          Not perceptible by human eyes.
 #  1 - 2      Perceptible through close observation.
-#  2 - 10     Perceptible at a glance.
+#  1 - 10     Perceptible at a glance.
 #  11 - 49    Colors are more similar than opposite
 #  100        Colors are exact opposite
 threshold = 15
@@ -67,8 +67,12 @@ kitty.src = "colors-kitty.conf"
 kitty.dst = "~/.cache/wallust/colors-kitty.conf"
 kitty.pywal = true
 
-hyprland.src = "colors-hyprland.conf"
-hyprland.dst = "~/.cache/wallust/colors-hyprland.conf"
+hyprland-old.src = "colors-hyprland-old.conf"
+hyprland-old.dst = "~/.cache/wallust/colors-hyprland-old.conf"
+hyprland-old.pywal = false
+
+hyprland.src = "colors-hyprland.lua"
+hyprland.dst = "~/.cache/wallust/colors-hyprland.lua"
 hyprland.pywal = false
 
 # neopywal.src = "colors-neopywal.vim"
@@ -84,9 +88,9 @@ base46.dst = "/home/smooch/.config/nvim/lua/themes/wallust.lua"
 base46.pywal = false
 
 chadwal.src = "chadwal.lua"
-chadwal.dst = "/home/smooch/.config/nvim/lua/themes/chadwal.lua"
+chadwal.dst = "~/.config/nvim/lua/themes/chadwal.lua"
 chadwal.pywal = false
 
 dunst.src = "colors-dunst.conf"
-dunst.dst = "/home/smooch/.config/dunst/dunstrc.d/50-wallust-colors.conf"
+dunst.dst = "~/.config/dunst/dunstrc.d/50-wallust-colors.conf"
 dunst.pywal = false
